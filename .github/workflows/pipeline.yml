@@ -22,5 +22,5 @@ jobs:
         flake8 .
     - name: Test with pytest
       run: |
-        pytest
+        make test
  
