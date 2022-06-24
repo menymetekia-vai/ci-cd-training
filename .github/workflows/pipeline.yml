@@ -23,4 +23,10 @@ jobs:
     - name: Test with pytest
       run: |
         make test
+    - name: Deploy model
+      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      with:
+          heroku_api_key: ${{secrets.API_TOKEN}}
+          heroku_app_name: "employee-predict-vantage-meny" #Must be unique in Heroku
+          heroku_email: "meny.metekia@vantage-ai.com"
  
